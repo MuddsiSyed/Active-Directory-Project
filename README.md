@@ -16,3 +16,6 @@ The objective of this project is to build an Active Directory home lab in an AWS
 - <b> Splunk: </b> Used for ingesting and analyzing logs, creating search queries, and visualizing security events for effective monitoring and detection.
 - <b> Kali Linux: </b> Deployed for penetration testing and vulnerability assessments, allowing the simulation of attacks against the Active Directory infrastructure.
 - <b> Atomic Red Team: </b> Used for simulating known attack techniques and generating telemetry data to help fine-tune detection capabilities within Splunk.
+
+## Conclusion: 
+This project provided valuable hands-on experience in building and managing a security lab within AWS, simulating real-world attack scenarios, and gaining deep insights into network and domain security. By integrating tools like Splunk, Kali Linux, and Atomic Red Team, the project not only deepened understanding of Active Directory but also significantly enhanced the ability to detect and respond to modern cyber threats. The ability to monitor and analyze security events within a simulated attack environment has reinforced key skills in security operations, threat detection, and incident response, which will be crucial for securing networks and systems in real-world scenarios.
