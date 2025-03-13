@@ -65,7 +65,7 @@ The objective of this project is to build an Active Directory home lab in an AWS
 ![Screenshot from 2025-03-13 23-03-51](https://github.com/user-attachments/assets/64dc0b83-9559-4a8c-a9c0-0a39d0d00b45)</br>
 REF 2 - All EC2 Instances launched for Active Directory Project
 
-#### Intalling Splunk on The Ubuntu Server (Splunk Server)
+#### Installing Splunk on The Ubuntu Server (Splunk Server)
 - <b> SSH into the Splunk Server and enter the following commands to install Splunk </b>
      - sudo apt-get update && sudo apt-get upgrade (To upgrade Ubuntu)
      - wget -O splunk-9.2.2-d76edf6f0a15-linux-2.6-amd64.deb "https://download.splunk.com/products/splunk/releases/9.2.2/linux/splunk-9.2.2-d76edf6f0a15-linux-2.6-amd64.deb" (To Download Splunk DEB File)
@@ -82,8 +82,50 @@ REF 2 - All EC2 Instances launched for Active Directory Project
      - Go to your local machine's web browser and enter the address as (http://publicIP of splunk server:8000) - In my case the address is http://43.204.233.77:8000
      ![image](https://github.com/user-attachments/assets/9d3e69fb-3e41-4e5d-9f35-26af290c7ba2)</br>
      REF 4 - Splunk Web Interface
-     - Enter your credentials to log in
-  
+     - Enter your credentials to log in </br></br>
+
+#### Installing Splunk Forwarder and Sysmon on Windows Server (Target-PC)
+- <b> RDP into the windows server and change the PC name to Target-PC </b>
+    - Open any RDP client and gain the remote access of the windows server (Target-PC)
+    - Click on search on the taskbar and type "View your PC Name"
+    - Click on View your PC Name
+    - Click Rename this PC
+    - Type "Target-PC" and click Next
+    - Click Restart Now (The remote desktop connection will also be lost)
+    - RDP into the server again and got to View your PC Name and you will see the PC name is successfully changed to "Target-PC"
+      ![Screenshot from 2025-03-14 01-25-08](https://github.com/user-attachments/assets/993f75de-27af-49d2-baec-e030854ed004)</br>
+      REF 5 - PC name changed to "Target-PC"</br>
+- <b> Installing Splunk Universal Forwarder and Sysmon </b>
+    - On Target-PC, go to web browser and go to splunk.com
+    - Log in using your Splunk Credentials
+    - Go to Products > Free Trial and Downloads
+    - Scroll down to Universal Forwarder and click on Get My Free Download
+    - Go to Previous Releases and download the version sama as the version you have installed on the Splunk Server
+    - In my case the version of the Splunk is 9.2.2 so I have downloaded 9.2.2 Splunk Forwarder
+    - Open the downloaded MSI file
+    - Check the box for License Agreeement and check "As on-premise Splunk Enterprise Instance" and click Next
+    - Create a username and password and click Next
+    - We don't have a deployment server so we can skip this option by clicking Next
+    - For the Receiving Indexer, enter the IP Address of the host as the private IP Address of Splunk Server and the port will be 9997
+      ![Screenshot from 2025-03-14 01-40-31](https://github.com/user-attachments/assets/bcf57ced-71d8-4494-ba78-9803edafbe58)</br>
+      REF 6 - Configuring the Receiving Indexer on Splunk Forwarder while installation
+    - Click Next and Click Install
+    - After Installation click on Finish
+    - Go to Browser and search sysmon download and click on Sysmon - Sysinternals from Microsoft
+    - Scroll down and click on Download Sysmon
+    - Go to browser again and search sysmon olaf config (We will use olaf sysmon configuration)
+    - Click on the GitHub page, scroll down and click on sysmonconfig.xml
+    - Click on Raw, then right click > Save as and save in your Downloads folder
+    - Go to your Download Directory then right click on Sysmon zip file and click extract all
+    - Click on the address bar and copy the file path (C:\Users\Administrator\Downloads\Sysmon)
+    - Open Powershell (Run as admin)
+    - cd C:\Users\Administrator\Downloads\Sysmon
+    - Enter the following command to install sysmon: .\sysmon.exe -i ..\sysmonconfig.xml
+    - Click Agree
+      ![Screenshot from 2025-03-14 02-33-06](https://github.com/user-attachments/assets/56a2c60f-830d-478d-a8d1-ac7ca5e67d44)</br>
+      REF 6 - Sysmon is installed successfully
+
+
 
 
 ## Conclusion: 
