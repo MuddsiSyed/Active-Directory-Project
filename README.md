@@ -18,6 +18,50 @@ The objective of this project is to build an Active Directory home lab in an AWS
 - <b> Atomic Red Team: </b> Used for simulating known attack techniques and generating telemetry data to help fine-tune detection capabilities within Splunk.
 
 ## Steps:
+### Launch 2 Windows Server, 1 Ubuntu Server and 1 Kali Linux instance in AWS
+- One Windows Server will be our Target-PC
+- The other Windows Server will be our Active Directory
+- Ubuntu Server will be our Splunk Server
+- Kali Linux will be our attacker machine </br> </br>
+
+#### Configuration on AWS for launching instances
+- <b> Windows Server (Target-PC) </b>
+   - Enter the name as Target-PC
+   - Select Windows from the Quick Start Option
+   - Microsoft Windows Server 2025 BASE
+   - T3 Medium (2 vCPU and 4 GiB RAM)
+   - Select a Key Pair 
+   - Network Settings: Select existing security group </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; - I have selected my existing security group (I will mention the i/b and o/b rules on the next steps)
+   - Storage: 50 GB </br></br>
+- <b> Windows Server (Active Directory - ADDC01) </b>
+   - Enter the name as ADDC01
+   - Select Windows from the Quick Start Option
+   - Microsoft Windows Server 2025 BASE
+   - T3 Medium (2 vCPU and 4 GiB RAM)
+   - Select a Key Pair 
+   - Network Settings: Select existing security group </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; - I have selected my existing security group (I will mention the i/b and o/b rules on the next steps)
+   - Storage: 50 GB </br></br>
+- <b> Ubuntu Server (Splunk Server) </b>
+   - Enter the name as Splunk Server
+   - Select Ubuntu from the Quick Start Option
+   - Ubuntu Server 24.04 LTS
+   - T3 Large (2 vCPU and 8 GiB RAM)
+   - Select a Key Pair 
+   - Network Settings: Select existing security group </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; - I have selected my existing security group (I will mention the i/b and o/b rules on the next steps)
+   - Storage: 100 GB </br></br>
+- <b> Kali Linux </b>
+   - Enter the name as Kali Linux
+   - Select Kali Linux from AMI options
+   - Ubuntu Server 24.04 LTS
+   - T2 Medium (2 vCPU and 4 GiB RAM)
+   - Select a Key Pair 
+   - Network Settings: Select existing security group </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; - I have selected my existing security group (I will mention the i/b and o/b rules on the next steps)
+   - Storage: 30 GB </br></br>
+
 
 
 ## Conclusion: 
