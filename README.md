@@ -62,6 +62,28 @@ The objective of this project is to build an Active Directory home lab in an AWS
     &nbsp; &nbsp; &nbsp; &nbsp; - I have selected my existing security group (I will mention the i/b and o/b rules on the next steps)
    - Storage: 30 GB </br></br>
 
+![Screenshot from 2025-03-13 23-03-51](https://github.com/user-attachments/assets/64dc0b83-9559-4a8c-a9c0-0a39d0d00b45)</br>
+REF 2 - All EC2 Instances launched for Active Directory Project
+
+#### Intalling Splunk on The Ubuntu Server (Splunk Server)
+- <b> SSH into the Splunk Server and enter the following commands to install Splunk </b>
+     - sudo apt-get update && sudo apt-get upgrade (To upgrade Ubuntu)
+     - wget -O splunk-9.2.2-d76edf6f0a15-linux-2.6-amd64.deb "https://download.splunk.com/products/splunk/releases/9.2.2/linux/splunk-9.2.2-d76edf6f0a15-linux-2.6-amd64.deb" (To Download Splunk DEB File)
+     - sudo apt install ./splunk-9.2.2-d76edf6f0a15-linux-2.6-amd64.deb (To install Splunk Enterprise)
+     - sudo /opt/splunk/bin/splunk start — accept-license (To accept the license before starting Splunk)
+     - Press and enter Y to accept the licence and proceed with the installation
+     - Create your username and password for splunk log in
+     - sudo /opt/splunk/bin/splunk start (To start Splunk)
+     ![Screenshot from 2025-03-13 23-55-12](https://github.com/user-attachments/assets/4c0d9e2f-98c8-47a5-a7d0-1e90eccf3d96)</br>
+     REF 3 - Splunk Installed Successfully
+     - If you see above screen where it says that the web interface is available at the privateIP:8000, then splunk is installed successfully
+- <b> After Splunk is installed on the splunk server, you can access the splunk web from your local machine </b>
+     - Go to Amazon EC2 instances page and check the public IP Address of the Splunk Server instance
+     - Go to your local machine's web browser and enter the address as (http://publicIP of splunk server:8000) - In my case the address is http://43.204.233.77:8000
+     ![image](https://github.com/user-attachments/assets/9d3e69fb-3e41-4e5d-9f35-26af290c7ba2)</br>
+     REF 4 - Splunk Web Interface
+     - Enter your credentials to log in
+  
 
 
 ## Conclusion: 
