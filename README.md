@@ -125,7 +125,7 @@ REF 2 - All EC2 Instances launched for Active Directory Project
       ![Screenshot from 2025-03-14 02-33-06](https://github.com/user-attachments/assets/56a2c60f-830d-478d-a8d1-ac7ca5e67d44)</br>
       REF 6 - Sysmon is installed successfully
 
- - <b> Configuring Splunk Universal Forwarder on Target-PC to Send Data to Splunk Server <b>
+ - <b> Configuring Splunk Universal Forwarder on Target-PC to Send Data to Splunk Server </b>
     - For our splunk forwarder to forward the data, we will have to create and configure inputs.conf in the local configuration folder
     - On Target-PC go to C:\Program Files\SplunkUniversalForwarder\etc\system\local
     - Right Click and New > Text Document
@@ -151,6 +151,8 @@ REF 2 - All EC2 Instances launched for Active Directory Project
     - After creating or updating our inputs.conf configuration file, we should restart our universal forwarder in order for the changes to take effect
     - Click Search on the taskbar, search and open Services
     - Scroll down until you find Splunk Forwarder
+      ![Screenshot from 2025-03-15 04-39-40](https://github.com/user-attachments/assets/d1abad37-10fe-4bce-9ed2-03ff7c8b3923)</br>
+
       
 
 
