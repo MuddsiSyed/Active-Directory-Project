@@ -187,7 +187,8 @@ Now we have our splunk forwarder and sysmon installed along with it's configurat
   - Click Apps on Splunk Web and click on Searching and Reporting
   - Search index="endpoint"
   - You will see the logs from our Target-PC which verifies that we are receiving the logs
-    ![image](https://github.com/user-attachments/assets/bc6a979d-dc3f-4a39-b44d-fb5a99e08405)
+    ![image](https://github.com/user-attachments/assets/bc6a979d-dc3f-4a39-b44d-fb5a99e08405)</br>
+    REF 11- Received logs from our Target-PC 
 
 #### Installing Splunk Forwarder and Sysmon on Windows Server (Active Directory - ADDC01)
 - <b> RDP into the windows server and change the PC name to ADDC01 </b>
@@ -198,7 +199,15 @@ Now we have our splunk forwarder and sysmon installed along with it's configurat
     - Type "ADDC01" and click Next
     - Click Restart Now (The remote desktop connection will also be lost)
     - RDP into the server again and go to View your PC Name and you will see the PC name is successfully changed to "ADDC01"
-      
+      ![image](https://github.com/user-attachments/assets/c95f159b-724b-4f83-8a3e-ec1ad4b27fa9)</br>
+      REF 12 - PC name changed to "ADDC01"
+- <b> Install and Configure Splunk Universal Forwarder and Sysmon on (ADDC01) </b>
+    - Repeat the same steps we did to install and configure Splunk Universal Forwarder and Sysmon on Target-PC
+    - Once everything is done successfully you will see 2 hosts when searching in the endpoint index on our Splunk Server
+      ![Screenshot from 2025-03-15 06-55-55](https://github.com/user-attachments/assets/24e19498-354d-4efd-97f6-2f38c404f51c)</br>
+      REF 13 - Receiving logs from the 2 hosts Target-PC and ADDC01
+
+Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they are configured to forward the logs to our splunk server. From the above, we can say that we are receiving the logs from both the hosts successfully.
 
 
 
