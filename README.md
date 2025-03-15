@@ -126,6 +126,7 @@ REF 2 - All EC2 Instances launched for Active Directory Project
       REF 6 - Sysmon is installed successfully
 
  - <b> Configuring Splunk Universal Forwarder on Target-PC to Send Data to Splunk Server </b>
+ 
     - For our splunk forwarder to forward the data, we will have to create and configure inputs.conf in the local configuration folder
     - On Target-PC go to C:\Program Files\SplunkUniversalForwarder\etc\system\local
     - Right Click and New > Text Document
@@ -150,8 +151,18 @@ REF 2 - All EC2 Instances launched for Active Directory Project
     - Click File > Save As and select the 'Save As Type' as All Files and enter the 'File Name' as inputs.conf then click Save
     - After creating or updating our inputs.conf configuration file, we should restart our universal forwarder in order for the changes to take effect
     - Click Search on the taskbar, search and open Services
-    - Scroll down until you find Splunk Forwarder
+    - Scroll down until you find SplunkForwarder
       ![Screenshot from 2025-03-15 04-39-40](https://github.com/user-attachments/assets/d1abad37-10fe-4bce-9ed2-03ff7c8b3923)</br>
+      REF 7 - SplunkForwarder in Services
+    - Check it's Log On As Column in Splunk Forwarder
+      ![Screenshot from 2025-03-15 04-39-40](https://github.com/user-attachments/assets/79e0efbe-cb17-45e2-b008-26d439262f8f)</br>
+      REF 8 - Splunk Forwarder logged in as NT SERVICE\SplunkForwarder
+    - If 'Log On As' is NT SERVICE\SplunkForwarder, the forwarder might not be able to collect the logs due to some of the permissions
+    - To fix this, change the 'Log On As' option to Local System
+    - Right Click on SplunkForwarder and click properties
+    - Click on Log On tab and select Local System account and click Apply and OK
+    - Restart the service
+
 
       
 
