@@ -189,8 +189,16 @@ Now we have our splunk forwarder and sysmon installed along with it's configurat
   - You will see the logs from our Target-PC which verifies that we are receiving the logs
     ![image](https://github.com/user-attachments/assets/bc6a979d-dc3f-4a39-b44d-fb5a99e08405)
 
-
-
+#### Installing Splunk Forwarder and Sysmon on Windows Server (Active Directory - ADDC01)
+- <b> RDP into the windows server and change the PC name to ADDC01 </b>
+    - Open any RDP client and gain the remote access of the windows server (Target-PC)
+    - Click on search on the taskbar and type "View your PC Name"
+    - Click on View your PC Name
+    - Click Rename this PC
+    - Type "ADDC01" and click Next
+    - Click Restart Now (The remote desktop connection will also be lost)
+    - RDP into the server again and go to View your PC Name and you will see the PC name is successfully changed to "ADDC01"
+      
 
 
 
