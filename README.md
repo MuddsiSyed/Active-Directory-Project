@@ -314,8 +314,8 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
      REF 29 - Adding the users for remote access
    - RDP into the Target-PC using the user name jsmith and use the password which you have created for this user
    - Now you have successfully logged in as the user jsmith
-
-      
+     ![Screenshot from 2025-03-15 10-16-39](https://github.com/user-attachments/assets/487d195d-5637-4b83-ba9a-0a2769a6b177)</br>
+     REF 30 - Successfully logged in as the user jsmith
 
 
 ## Conclusion: 
