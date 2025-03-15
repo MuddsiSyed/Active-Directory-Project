@@ -223,7 +223,24 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
      REF 15 - Adding server role - Active Directory Domain Services
    - Click on Add Features
    - Keep on clicking next until you get Install button
-   - Click on Install and wait for it to get installed
+   - Click on Install and wait for it to get installed untill you see "Configuration required. Installation succeeded on ADDC01."
+     ![Screenshot from 2025-03-15 07-26-50](https://github.com/user-attachments/assets/781cd855-e804-4013-a8d8-dbffa5e2ac6c)</br>
+     REF 16 - Successfull installation of Active Directory Domain Service
+   - Click Close
+- <b> Promoting the Server to Domain Controller </b>
+   - Click on the Flag icon on top and click on "Promote this server to a Domain Controller"
+   - Click "Add a new forest" and enter the Root domain name as "adproject.local"
+     ![image](https://github.com/user-attachments/assets/95b680d4-0107-4e1e-b4a9-dc45a97031e1)</br>
+     REF 17 - Adding a new forest and configuring the root domain name
+   - Click Next
+   - Leave everything default and put in a password
+   - Keep on clicking Next until you see the Paths tab
+     ![image](https://github.com/user-attachments/assets/d9c39a06-6303-4110-903e-e9e5edbb2077)</br>
+     REF 18 - Database DIT Path
+   - These will be the paths used to store our database files named NTDS.DIT</br>
+     <b>FYI</b> - Attackers love to target domain controllers because it has access to everything inluding the NTDS.DIT database file which contains everything related to active directory including password hashes.</br>
+     If you notice any unauthorized activity on this file, you can assume that your entire domain has been <b> compromised</b>.
+
 
 
 
