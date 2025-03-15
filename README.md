@@ -183,6 +183,11 @@ Now we have our splunk forwarder and sysmon installed along with it's configurat
     ![Screenshot from 2025-03-15 06-14-39](https://github.com/user-attachments/assets/021768f8-fe35-4d1c-a9cc-baa691195e18)</br>
   - In 'Listen on this port' field, enter 9997
   - Click Save
+- <b> Searching on Splunk Server to verify if we are receiving the logs from Target-PC </b>
+  - Click Apps on Splunk Web and click on Searching and Reporting
+  - Search index="endpoint"
+  - You will see the logs from our Target-PC which verifies that we are receiving the logs
+    ![image](https://github.com/user-attachments/assets/bc6a979d-dc3f-4a39-b44d-fb5a99e08405)
 
 
 
