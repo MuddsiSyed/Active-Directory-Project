@@ -263,7 +263,7 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
      ![image](https://github.com/user-attachments/assets/2cfbea54-e211-4540-a914-1bc202189a4e)</br>
      REF 22 - A new user Terry Smith in HR unit has now been created
 
-#### Configuring Target-PC to join ADDC01 domain (Active Directory domain)
+#### Configuring Target-PC to join adproject.local domain (Active Directory domain)
 - <b> Configuration on AWS to configure the Target-PC DNS  </b>
    - Go to AWS and search DHCP options set and open it
    - Click on Create DHCP option set
@@ -279,11 +279,41 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
      ![image](https://github.com/user-attachments/assets/50d2f289-b943-4ae1-9874-d6f5b3f1dce3)</br>
      REF 24 - Editing VPC Settings
    - Click Save
-
-
-
-
-
+- <b> Configuring Target-PC DNS </b>
+   - RDP into Target-PC and go to Network and Internet Settings
+   - Click on Ethernet
+   - Scroll down and Click edit for DNS Server assignment
+   - Select Manual and enter the preferred DNS as 172.31.10.42 (Private IP address of the Active Directory Server)
+     ![image](https://github.com/user-attachments/assets/e12db80c-4386-4685-b34e-04f6c3281922)</br>
+     REF 25 - Changing the DNS server to our Active Directory Server
+   - Click Save
+- <b> Joining the adproject.local domain </b>
+   - Go to View My PC Name
+   - Click on Domain or workgroup
+     ![Screenshot from 2025-03-15 09-36-04](https://github.com/user-attachments/assets/442c7bcd-f125-4fb1-81de-d24197285389)</br>
+     REF 26 - Clicking on Domain or workgroup
+   - Click Change
+   - Click Domain and type the domain name "adproject.local"
+     ![image](https://github.com/user-attachments/assets/0d913921-026b-4e4d-aa56-fed9513f73ca)</br>
+     REF 27 - Changing the domain to our Active Directory domain
+   - Click OK
+   - If the connection to our domain is successfull, it will ask for Username and Password
+   - Enter the user name and password for ADDC01 Administrator (It should be the username and password which you used to RDP into the ADDC01 server)
+   - Target-PC is added to the adproject.domain successfully.</br>
+     ![image](https://github.com/user-attachments/assets/633a51e2-8af9-4d4e-858d-efa3f961edda)</br>
+     REF 28 - Target-PC successfully joined our Active Directory domain
+   - Restart the server for the changes to be applied
+- <b> Logging in with the user we created Jenny Smith </b>
+   - RDP into Target-PC as Administrator
+   - We need to enable Remote Desktop access to the user Jenny Smith
+   - Go to Settings > System and click on Remote Desktop
+   - Click Remote Desktop Users
+   - Click Add and enter Jenny Smith's user name (jsmith) in the object names field box
+   - Click Check Names and click OK</br>
+     ![image](https://github.com/user-attachments/assets/cbe250b7-66fe-43e1-9760-a29af6cefd24)</br>
+     REF 29 - Adding the users for remote access
+   - RDP into the Target-PC using the user name jsmith and use the password which you have created for this user
+   - Now you have successfully logged in as the user jsmith
 
       
 
