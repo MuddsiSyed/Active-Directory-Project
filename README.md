@@ -126,7 +126,6 @@ REF 2 - All EC2 Instances launched for Active Directory Project
       REF 6 - Sysmon is installed successfully
 
  - <b> Configuring Splunk Universal Forwarder on Target-PC to Send Data to Splunk Server </b>
- 
     - For our splunk forwarder to forward the data, we will have to create and configure inputs.conf in the local configuration folder
     - On Target-PC go to C:\Program Files\SplunkUniversalForwarder\etc\system\local
     - Right Click and New > Text Document
@@ -161,7 +160,33 @@ REF 2 - All EC2 Instances launched for Active Directory Project
     - To fix this, change the 'Log On As' option to Local System
     - Right Click on SplunkForwarder and click properties
     - Click on Log On tab and select Local System account and click Apply and OK
-    - Restart the service
+    - Restart the service </br>
+
+Now we have our splunk forwarder and sysmon installed along with it's configuration on Target-PC
+
+#### Configuring Splunk Server to receive the logs
+- <b> Creating 'endpoint' index in the splunk server to receive the logs from 'Target-PC' </b>
+  - In inputs.conf file, we we have mentioned in our configuration 'index=endpoint'
+  - Let's create an index endpoint in Splunk Server to receive the logs as the data from Target-PC will go to that index
+  - Log in to the Splunk Web Interface (http://43.204.233.77:8000)
+  - Click on Settings > Indexes
+  - Click on New Index
+    ![Screenshot from 2025-03-15 06-04-46](https://github.com/user-attachments/assets/ac45c0fc-a375-4664-a0a9-9063839a99a2)</br>
+    REF 9 - Creating New Index Splunk Server
+  - Enter the Index Name as 'endpoint' and click on Save
+    Index 'endpoint' is now created in our splunk server
+    ![Screenshot from 2025-03-15 06-10-00](https://github.com/user-attachments/assets/42c64552-d77f-4941-b008-044d83667094)</br>
+    REF 10 - endpoint Index Created
+- <b> Configure our Splunk Server to receive the data </b>
+  - Go to Settings > Forwarding and receiving
+  - Click on Add New under Receive Data
+    ![Screenshot from 2025-03-15 06-14-39](https://github.com/user-attachments/assets/021768f8-fe35-4d1c-a9cc-baa691195e18)</br>
+  - In 'Listen on this port' field, enter 9997
+  - Click Save
+
+
+
+
 
 
       
