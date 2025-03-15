@@ -209,6 +209,22 @@ Now we have our splunk forwarder and sysmon installed along with it's configurat
 
 Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they are configured to forward the logs to our splunk server. From the above, we can say that we are receiving the logs from both the hosts successfully.
 
+#### Installing and Configuring Active Directory on ADDC01
+- <b> Install Active Directory Domain Service </b>
+   - Go to search and search 'Server Manager'
+   - Click on Manage > Add Roles and Features
+     ![Screenshot from 2025-03-15 07-07-23](https://github.com/user-attachments/assets/c98c62d9-3213-4555-84db-6a1604091318)</br>
+     REF 14 - Adding Roles and Features
+   - Click Next
+   - Select Role-based or featured-based installation
+   - Your default server will be selected. Click Next
+   - From the list, click on Active Directory Domain Services
+     ![Screenshot from 2025-03-15 07-17-01](https://github.com/user-attachments/assets/5c21dfcd-c7ac-42fd-ab0d-02e7e8c31858)</br>
+     REF 15 - Adding server role - Active Directory Domain Services
+   - Click on Add Features
+   - Keep on clicking next until you get Install button
+   - Click on Install and wait for it to get installed
+
 
 
       
