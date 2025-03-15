@@ -243,7 +243,29 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
      If you notice any unauthorized activity on this file, you can assume that your entire domain has been <b> compromised</b>.
    - Keep Clicking Next until you see Install button then click Install
    - Once the installation is successfull you will be restarted
-   - RDP into the ADDC01 server again
+- <b> Creating users in our Active Directory </b>
+   - We will create two objects (Organizational Units) and create one user in each organization
+   - Once the system is restarted, go to Server Manager
+   - Click on Tools > Active Directory Users and Computers
+     ![image](https://github.com/user-attachments/assets/0fe75ff9-9e89-48ee-bb75-45442d2570db)</br>
+     REF 19 - Active Directory Users and Computers
+   - Right Click on adproject.local > New and Select Organizational Unit
+     ![image](https://github.com/user-attachments/assets/4921eb72-a652-40ce-9fc4-22b4317eda4d)</br>
+     REF 20 - Adding a new Object - Organizational Unit
+   - Enter the name as "IT" and click OK
+   - Right Click on IT > New and select User
+   - Enter the name as Jenny Smith and the User Log On as jsmith
+   - Click Next
+   - Enter a password and uncheck "User must change password at next logon" and click Next and Finish
+     ![image](https://github.com/user-attachments/assets/67165819-3662-4a91-b699-cbad0b117ca6)</br>
+     REF 21 - A new user Jenny Smith in IT unit has now been created
+   - Follow the same process and create a new Organizational Unit as "HR" and create a new user "Terry Smith" in it
+     ![image](https://github.com/user-attachments/assets/2cfbea54-e211-4540-a914-1bc202189a4e)</br>
+     REF 22 - A new user Terry Smith in HR unit has now been created
+
+
+
+
 
 
 
