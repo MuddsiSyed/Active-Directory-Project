@@ -23,6 +23,7 @@ The objective of this project is to build an Active Directory home lab in an AWS
 - The other Windows Server will be our Active Directory
 - Ubuntu Server will be our Splunk Server
 - Kali Linux will be our attacker machine </br> </br>
+- All the servers must be in the same subnet
 
 #### Configuration on AWS for launching instances
 - <b> Windows Server (Target-PC) </b>
@@ -63,7 +64,7 @@ The objective of this project is to build an Active Directory home lab in an AWS
    - Storage: 30 GB </br></br>
 
 ![Screenshot from 2025-03-13 23-03-51](https://github.com/user-attachments/assets/64dc0b83-9559-4a8c-a9c0-0a39d0d00b45)</br>
-REF 2 - All EC2 Instances launched for Active Directory Project
+REF 2 - All EC2 Instances launched for Active Directory Project and all servers are in the same subnet
 
 #### Installing Splunk on The Ubuntu Server (Splunk Server)
 - <b> SSH into the Splunk Server and enter the following commands to install Splunk </b>
@@ -191,7 +192,7 @@ Now we have our splunk forwarder and sysmon installed along with it's configurat
     REF 11- Received logs from our Target-PC 
 
 #### Installing Splunk Forwarder and Sysmon on Windows Server (Active Directory - ADDC01)
-- <b> RDP into the windows server and change the PC name to ADDC01 </b>
+- <b> RDP into the other windows server and change the PC name to ADDC01 </b>
     - Open any RDP client and gain the remote access of the windows server (Target-PC)
     - Click on search on the taskbar and type "View your PC Name"
     - Click on View your PC Name
@@ -240,7 +241,9 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
    - These will be the paths used to store our database files named NTDS.DIT</br>
      <b>FYI</b> - Attackers love to target domain controllers because it has access to everything inluding the NTDS.DIT database file which contains everything related to active directory including password hashes.</br>
      If you notice any unauthorized activity on this file, you can assume that your entire domain has been <b> compromised</b>.
-
+   - Keep Clicking Next until you see Install button then click Install
+   - Once the installation is successfull you will be restarted
+   - RDP into the ADDC01 server again
 
 
 
