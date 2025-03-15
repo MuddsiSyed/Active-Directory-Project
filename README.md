@@ -263,6 +263,22 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
      ![image](https://github.com/user-attachments/assets/2cfbea54-e211-4540-a914-1bc202189a4e)</br>
      REF 22 - A new user Terry Smith in HR unit has now been created
 
+#### Configuring Target-PC to join ADDC01 domain (Active Directory domain)
+- <b> Configuration on AWS to configure the Target-PC DNS  </b>
+   - Go to AWS and search DHCP options set and open it
+   - Click on Create DHCP option set
+   - Keep the name as my-dhcp
+   - Enter the Domain Name as adproject.local (Your domain name) and Domain name servers as 172.31.10.42 (Private IP address of your Active Directory Server)
+     ![image](https://github.com/user-attachments/assets/c453ae6d-eb91-4907-97a8-d6a7e1961aef)</br>
+     REF 23 - Creating a DHCP option set
+   - Scroll down and click on create DHCP option set
+   - Now we need to attach this DHCP option set to our VPC
+   - Click on Your VPCs
+   - Select your VPC and click Actions > Edit VPC Settings
+   - Click on DHCP option set and select the option set you have just created from the drop down menu
+     ![image](https://github.com/user-attachments/assets/50d2f289-b943-4ae1-9874-d6f5b3f1dce3)</br>
+     REF 24 - Editing VPC Settings
+   - Click Save
 
 
 
