@@ -321,7 +321,7 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
      ![Screenshot from 2025-03-15 10-16-39](https://github.com/user-attachments/assets/487d195d-5637-4b83-ba9a-0a2769a6b177)</br>
      REF 30 - Successfully logged in as the user jsmith
 
-#### Launching Brute Force Attacks through Kali Linux (Hydra)
+### Launching Brute Force Attacks through Kali Linux (Hydra)
 In this section, we will launch brute force attacks in Kali Linux to generate telemetry through Hydra tool. Hydra (or THC Hydra) is a parallelized network login cracker built into various operating systems like Kali Linux, Parrot and other major penetration testing environments. It was created as a proof of concept tool, for security researchers to demonstrate how easy it can be to crack logins. Hydra works by using different approaches, such as brute-force attacks and dictionary attacks, in order to guess the right username and password combination. 
 - <b> Updating Kali Linux and Installing Hydra </b>
       - SSH into Kali Linux instance and enter the following command to upgrade
