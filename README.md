@@ -343,6 +343,13 @@ In this section, we will launch brute force attacks in Kali Linux to generate te
 - <b> Launching the attack to our Target-PC using hydra tool </b>
    - Here is the command to launch the attack to our Target-PC
    - hydra -l jsmith  -P passwords.txt -f rdp://172.31.40.34 -v   </br> <i> hydra </i> is the tool </br> <i> -l </i> is to use a single username </br> <i> jsmith </i> is the username </br> <i> -P </i> is to use a password file </br> <i>-f</i> implies to stop this attack once it finds the correct password </br> <i>rdp://172.31.40.34</i> is to target the rdp port of the private ip of the Target-PC </br> <i>-v</i> is to run it in verbose mode.
+   - Here is how it generates the attack and finds the password
+     ![Screencastfrom2025-03-1623-11-31-ezgif com-optimize](https://github.com/user-attachments/assets/abf70d7c-33ff-4414-a178-7c8cabbee118)</br>
+     REF 31 - Brute Force Attack in Action to our Target-PC 
+   - After a successfull attack, it finds the correct password and will display it as below
+     ![image](https://github.com/user-attachments/assets/4ecea2ce-5647-4c13-89ef-23390d3521c0)</br>
+     REF 32 - Successfull Attack - Found the password to user name jsmith
+
 
 ## Conclusion: 
 This project provided valuable hands-on experience in building and managing a security lab within AWS, simulating real-world attack scenarios, and gaining deep insights into network and domain security. By integrating tools like Splunk, Kali Linux, and Atomic Red Team, the project not only deepened understanding of Active Directory but also significantly enhanced the ability to detect and respond to modern cyber threats. The ability to monitor and analyze security events within a simulated attack environment has reinforced key skills in security operations, threat detection, and incident response, which will be crucial for securing networks and systems in real-world scenarios.
