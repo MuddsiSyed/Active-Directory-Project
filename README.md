@@ -111,7 +111,7 @@ REF 2 - All EC2 Instances launched for Active Directory Project and all servers 
     - Check the box for License Agreeement and check "As on-premise Splunk Enterprise Instance" and click Next
     - Create a username and password and click Next
     - We don't have a deployment server so we can skip this option by clicking Next
-    - For the Receiving Indexer, enter the IP Address of the host as the private IP Address of Splunk Server and the port will be 9997
+    - For the Receiving Indexer, enter the IP Address of the host as the private IP Address of Splunk Server and the port will be 9997</br>
       ![Screenshot from 2025-03-14 01-40-31](https://github.com/user-attachments/assets/bcf57ced-71d8-4494-ba78-9803edafbe58)</br>
       REF 6 - Configuring the Receiving Indexer on Splunk Forwarder while installation
     - Click Next and Click Install
