@@ -323,10 +323,20 @@ Both Target-PC and ADDC01 have sysmon and splunk forwarder installed and they ar
 
 ### Launching Brute Force Attacks through Kali Linux (Hydra)
 In this section, we will launch brute force attacks in Kali Linux to generate telemetry through Hydra tool. Hydra (or THC Hydra) is a parallelized network login cracker built into various operating systems like Kali Linux, Parrot and other major penetration testing environments. It was created as a proof of concept tool, for security researchers to demonstrate how easy it can be to crack logins. Hydra works by using different approaches, such as brute-force attacks and dictionary attacks, in order to guess the right username and password combination. 
-- <b> Updating Kali Linux and Installing Hydra </b>
-      - SSH into Kali Linux instance and enter the following command to upgrade
-      - sudo apt-get update && sudo apt-get upgrade
-      - 
+
+#### Updating Kali Linux and Installing Hydra
+- <b> SSH into Kali Linux instance and enter the following commands to upgrade and to install Hydra </b>
+  - sudo apt-get update && sudo apt-get upgrade
+  - sudo apt install hydra
+  - You can find more information on Hydra tool on this page: https://www.kali.org/tools/hydra/
+#### Launching RDP Brute Force attacks to Target-PC through Hydra
+- Create a folder "ad-project" and create a passwords.txt file
+   - mkdir ad-project &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (Making a foldeer called ad-project) </i>
+   - cd /usr/share/wordlist/ &nbsp;&nbsp; &nbsp; &nbsp; -- <i> (Going to the folder wordlist which contains rockyou file for passwords) </i>
+   - sudo gunzip rockyou.txt.gz &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (Unzipping rockyou.tzt.gz to get the rockyou.txt file) </i>
+   - cp rockyou.txt ~/ad-project &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (Copying rockyou.txt to our project's folder) </i>
+   - cd /ad-project &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (Go to ad-project directory) </i>
+   - head -n 20 rockyou.txt > passwords.txt &nbsp; &nbsp;&nbsp; &nbsp; -- <i> (To use the first 20 passwords and input it into a new file "passwords.txt") </i>
 
 ## Conclusion: 
 This project provided valuable hands-on experience in building and managing a security lab within AWS, simulating real-world attack scenarios, and gaining deep insights into network and domain security. By integrating tools like Splunk, Kali Linux, and Atomic Red Team, the project not only deepened understanding of Active Directory but also significantly enhanced the ability to detect and respond to modern cyber threats. The ability to monitor and analyze security events within a simulated attack environment has reinforced key skills in security operations, threat detection, and incident response, which will be crucial for securing networks and systems in real-world scenarios.
