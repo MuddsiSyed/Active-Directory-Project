@@ -3,7 +3,7 @@
 The objective of this project is to build an Active Directory home lab in an AWS EC2 environment, integrating key security tools such as Splunk, Kali Linux, and Atomic Red Team. This setup will provide hands-on experience with understanding and managing a domain environment, learning how to ingest events into Splunk, and generating telemetry data to simulate real-world cyber attacks. The primary goal is to enhance the ability to detect and respond to security incidents by analyzing attack patterns and data streams, ultimately improving future detection capabilities.
 
 ![Screencastfrom2025-03-1621-33-38-ezgif com-speed](https://github.com/user-attachments/assets/751a51bc-e805-47b3-869e-142475072f85)</br>
-REF 1 - Logical Diagram of the Project
+REF 1 - Logical Diagram of Active Directory Project
 
 
 ## Skills Learned:
