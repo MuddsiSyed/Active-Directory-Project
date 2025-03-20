@@ -349,6 +349,34 @@ In this section, we will launch brute force attacks in Kali Linux to generate te
    - After a successfull attack, it finds the correct password and will display it as below
      ![image](https://github.com/user-attachments/assets/4ecea2ce-5647-4c13-89ef-23390d3521c0)</br>
      REF 32 - Successfull Attack - Found the password to user name jsmith
+ - <b> Searching on Splunk For the Logs Associated to This Attack </b>
+   - Go to Apps > Search and Reporting on Splunk Web
+   - Enter on Search Bar the following selecting the Last 15 minutes: </br>
+     index="endpoint" EventCode=4625  &nbsp; &nbsp;&nbsp; &nbsp; -- <i> Event ID 4625 in Windows Event Viewer indicates a failed logon attempt, meaning an </br> &nbsp; &nbsp;&nbsp; &nbsp; account failed to log on to a computer, and it's a crucial security event for monitoring unauthorized access attempts </i>
+   - We can see the search results as below --
+     ![image](https://github.com/user-attachments/assets/302d29c4-ca9c-43a4-83af-9e087b03450c)</br>
+     REF 33 - Searching all the logs related to EventCode 4625 from the last 15 minutes
+   - From the above can see we got 23 log events (failed log in events)
+   - If we scroll down and check the "user" field from the Interesting Fields we can the user for all 23 log in is jsmith
+     ![image](https://github.com/user-attachments/assets/fbadf883-26e9-4e68-9dd5-9b5233d4038e)</br>
+     REF 34 - User is jsmith
+   - All the events in the search are recorded almost at the same time which indicates a brute force attack
+     ![Screenshot from 2025-03-20 07-30-37](https://github.com/user-attachments/assets/c22f1dee-57f0-49d1-8e91-4cab242b2754)</br>
+     REF 35 - All events (failed log ins) are generated at the same time
+   - Let's open one of the event to gather more information
+   - Click on "Show all 61 lines" on any of the event
+     ![Screenshot from 2025-03-20 07-38-03](https://github.com/user-attachments/assets/0b1aed03-6e96-452c-8722-41306d27ac34)</br>
+     REF 36 - Opening the event for more information
+   - From the above we can gather the below information of the attack --
+       - EventCode=4625 &nbsp; &nbsp; <i> Event ID for failed log in event </i>
+       - ComputerName=Target-PC.adproject.local &nbsp; &nbsp; <i> The host from which this event is generated from i.e. Target-PC and the attack is directed to this machine </i>
+       - Account Name: jsmith &nbsp; &nbsp; <i> The username which the attacker used to brute force </i>
+       - Worksation Name: kali &nbsp; &nbsp; <i> The operating system of the attacker </i>
+       - Source Network Address:	172.31.43.162 &nbsp; &nbsp; <i> The IP address of the attacker machine. (That is the IP address of our Kali Linux instance in AWS) </i>
+       - Source Port: 0 &nbsp; &nbsp; <i> The source port used for the attack </i>
+   - Therefore we are able to successfully detect the brute force attack through searching on Splunk for the respective logs
+   - To enhance our detection capabilites, we can create dashboards and alerts on Splunk.
+   
 
 
 ## Conclusion: 
