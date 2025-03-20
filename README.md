@@ -391,10 +391,11 @@ REF 37 - Login Activity and Threat Monitoring Dahsboard
         - <b> Y-Axis (Count of Failed Logins): </b>The vertical axis shows the count or frequency of failed login attempts. A spike in this metric could highlight an anomaly.
         - <b> Real-Time Search: </b>The data is updated continuously or at short intervals, ensuring the dashboard reflects the most current status of login attempts. This can be crucial for immediate response in case of a security threat.</br>
         - <b> Use Case: </b>Detecting unusual login failures could help identify suspicious behavior, such as brute-force attempts or the use of incorrect credentials by unauthorized users.
+  </br></br>
    - <b>Successful Logins:</b>
      ![image](https://github.com/user-attachments/assets/1fe6b500-d526-4878-8885-35aa0e67f6b1)</br>
      REF 39 - This visualization tracks the number of successful login attempts over the past 24 hours in real time.</br>
-     <b> Key Points to Consider: </b></br>
+      <b> Key Points to Consider: </b></br>
         - <b> Purpose: </b>The timechart for successful logins shows how often users are able to log into the system successfully. This helps establish baseline patterns for normal login activity, and any drastic deviation (e.g., spikes in successful logins) could indicate either a positive or suspicious change, depending on the context.
         - <b> Additional Context:</b>As both Failed Logins and Successful Logins are represented as timecharts and the Failed Logins chart is placed above the Successful Logins panel in the dashboard, we can detect a successful login from a specific user after many failed attempts. By checking the time of failed logins and the time of successful login for the same user, we can correlate the patterns and investigate whether a legitimate user managed to log in after repeated failures, or if this could indicate a compromised account or attack scenario.
         - <b> X-Axis (Time): </b>The horizontal axis represents time, typically broken down into intervals like minutes or hours.
@@ -403,8 +404,22 @@ REF 37 - Login Activity and Threat Monitoring Dahsboard
         - <b> Use Case: </b></br>
              <b>Tracking successful logins </b>can help identify irregular patterns such as logins from unexpected locations or devices, which could suggest account compromise or unauthorized access.</br>
              <b>Correlating Failed and Successful Logins: </b>By comparing the times of failed login attempts (tracked in the chart above) and successful logins, you can identify if a specific user successfully logs in after multiple failed attempts. This can help detect scenarios where attackers may have repeatedly tried different credentials until they succeeded, which could indicate a brute-force attack or unauthorized account access.
-        
- 
+   </br></br>       
+   - <b>Successful VS Failed Logins:</b>
+   ![image](https://github.com/user-attachments/assets/76da4aee-e6f1-40c3-8fe8-377864b0d6d6)</br>
+   REF 40 - This visualization provides a quick, high-level overview of the proportion of failed versus successful login attempts over a specific time period, typically the past 24 hours.</br>
+    <b> Key Points to Consider: </b></br>
+      - <b> Purpose: </b>The pie chart helps easily compare the relative number of successful logins against failed logins in a given time frame. This is crucial for identifying whether login attempts are mostly legitimate or if there’s a significant amount of failed logins that might indicate a security issue.
+      - <b> Segments: </b></br>
+            One segment will represent the failed login attempts.</br>
+            The other segment will represent the successful login attempts.</br>
+      - <b> Data Source: </b>The data is pulled from both successful and failed login events. It gives an overall picture of login health — if the failed logins take up a significant portion of the chart, this can be an immediate indicator that something needs investigation (e.g., brute force attacks, invalid credentials, or misconfigured systems).
+      - <b> Use Case: </b></br>
+            Proactive Security Monitoring: If the pie chart shows a disproportionate amount of failed logins (for example, 70% failed vs 30% successful), this could trigger an immediate investigation into potential attacks, misconfigurations, or suspicious activities.</br>
+            Comparing Trends: Over time, the chart can show trends in the balance between successful and failed logins, highlighting shifts in login behavior that require attention.</br>
+      
+  
+
 
 
 ## Conclusion: 
