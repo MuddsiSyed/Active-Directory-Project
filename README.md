@@ -378,8 +378,8 @@ In this section, we will launch brute force attacks in Kali Linux to generate te
    - To enhance our detection capabilites, we can create dashboards and alerts on Splunk.
    
 ### Creating Dashboard and Alerts on Splunk
-#### Brute Force Attack Detection Dashboard
-![image](https://github.com/user-attachments/assets/54c2b2ba-fafe-49f4-9725-24b5c689b102)</br>
+#### Login Activity and Threat Monitoring Dashboard
+![image](https://github.com/user-attachments/assets/46f5c330-0710-4627-9e5c-d889b3745ca0)</br>
 
 
 
