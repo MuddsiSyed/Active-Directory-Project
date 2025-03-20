@@ -380,7 +380,31 @@ In this section, we will launch brute force attacks in Kali Linux to generate te
 ### Dashboards and Alerts I created on Splunk
 #### Login Activity and Threat Monitoring Dashboard
 ![image](https://github.com/user-attachments/assets/46f5c330-0710-4627-9e5c-d889b3745ca0)</br>
-
+REF 37 - Login Activity and Threat Monitoring Dahsboard
+- <b> Key Visualizations: </b>
+   - <b>Failed Logins:</b>
+     ![image](https://github.com/user-attachments/assets/0c94eade-a6ea-4755-afe4-ad836db9518f)</br>
+     REF 38 - This visualization tracks the number of failed login attempts over the past 24 hours in real-time.</br>
+     <b> Key Points to Consider: </b></br>
+        - <b>Purpose:</b> The timechart helps monitor potentially malicious activities by tracking when and how many failed login attempts occur over a given period. A surge in failed login attempts could indicate a brute force attack or unauthorized access attempts.
+        - <b> X-Axis (Time): </b>The horizontal axis represents time, typically broken down into intervals like minutes or hours.
+        - <b> Y-Axis (Count of Failed Logins): </b>The vertical axis shows the count or frequency of failed login attempts. A spike in this metric could highlight an anomaly.
+        - <b> Real-Time Search: </b>The data is updated continuously or at short intervals, ensuring the dashboard reflects the most current status of login attempts. This can be crucial for immediate response in case of a security threat.</br>
+        - <b> Use Case: </b>Detecting unusual login failures could help identify suspicious behavior, such as brute-force attempts or the use of incorrect credentials by unauthorized users.
+   - <b>Successful Logins:</b>
+     ![image](https://github.com/user-attachments/assets/1fe6b500-d526-4878-8885-35aa0e67f6b1)</br>
+     REF 39 - This visualization tracks the number of successful login attempts over the past 24 hours in real time.</br>
+     <b> Key Points to Consider: </b></br>
+        - <b> Purpose: </b>The timechart for successful logins shows how often users are able to log into the system successfully. This helps establish baseline patterns for normal login activity, and any drastic deviation (e.g., spikes in successful logins) could indicate either a positive or suspicious change, depending on the context.
+        - <b> Additional Context:</b>As both Failed Logins and Successful Logins are represented as timecharts and the Failed Logins chart is placed above the Successful Logins panel in the dashboard, we can detect a successful login from a specific user after many failed attempts. By checking the time of failed logins and the time of successful login for the same user, we can correlate the patterns and investigate whether a legitimate user managed to log in after repeated failures, or if this could indicate a compromised account or attack scenario.
+        - <b> X-Axis (Time): </b>The horizontal axis represents time, typically broken down into intervals like minutes or hours.
+        - <b> Y-Axis (Count of Successful Logins): </b>This axis shows the frequency of successful logins within the time frame. This helps the team understand regular usage patterns, and abnormal spikes can be investigated further.
+        - <b> Real-Time Search: </b>Just like the failed logins chart, the data is updated in real-time, allowing for continuous monitoring of login activity.</br>
+        - <b> Use Case: </b></br>
+             <b>Tracking successful logins </b>can help identify irregular patterns such as logins from unexpected locations or devices, which could suggest account compromise or unauthorized access.</br>
+             <b>Correlating Failed and Successful Logins: </b>By comparing the times of failed login attempts (tracked in the chart above) and successful logins, you can identify if a specific user successfully logs in after multiple failed attempts. This can help detect scenarios where attackers may have repeatedly tried different credentials until they succeeded, which could indicate a brute-force attack or unauthorized account access.
+        
+ 
 
 
 ## Conclusion: 
