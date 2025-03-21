@@ -421,7 +421,7 @@ REF 37 - Login Activity and Threat Monitoring Dahsboard
 
    - <b> Top 10 Source IPs for Failed Logins:</b>
    ![image](https://github.com/user-attachments/assets/d7d4334c-99a2-40f1-977c-9a1bacede5cf)</br>
-   Ref 41 - Top 10 Source Ips for Failed Logins from the past 24 hours to realtime</br>
+   Ref 41 - Top 10 Source IPs for Failed Logins from the past 24 hours</br>
    <b> Key Points to Consider: </b></br>
       - <b> Purpose: </b>This visualization is designed to identify and track the IP addresses that have made the most failed login attempts within a specified time frame. Monitoring this information helps in identifying potential security threats, such as brute-force attacks or unauthorized access attempts, which could compromise your system.
       - <b> Use Case: </b></br>
