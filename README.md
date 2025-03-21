@@ -377,7 +377,10 @@ In this section, we will launch brute force attacks in Kali Linux to generate te
    - Therefore we are able to successfully detect the brute force attack through searching on Splunk for the respective logs
    - To enhance our detection capabilites, we can create dashboards and alerts on Splunk.
    
-### Login Activity and Threat Monitoring Dashboard
+### Login Activity and Threat Monitoring Dashboard in Splunk
+The Login Activity and Threat Monitoring Dashboard which I created in Splunk is designed to provide insights into both successful and failed login attempts, helping detect potential security threats. It includes a column chart for Failed Logins and another for Successful Logins, as well as a pie chart that shows the ratio of Successful vs. Failed Logins. Additionally, the dashboard features a table listing the Top 10 Source IPs for Failed Logins, allowing for easy identification of suspicious activity.</br></br>
+
+By correlating the time of failed logins with successful logins, the dashboard enables the detection of login patterns that may suggest security concerns, such as brute-force attacks or compromised accounts. For example, if a user successfully logs in after several failed attempts, it may indicate an attacker trying various credentials. This correlation allows for proactive investigation and response to potential unauthorized access or account breaches.</br></br>
 ![image](https://github.com/user-attachments/assets/46f5c330-0710-4627-9e5c-d889b3745ca0)</br>
 REF 37 - Login Activity and Threat Monitoring Dahsboard
 - <b> Key Visualizations: </b>
