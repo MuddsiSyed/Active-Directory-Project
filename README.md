@@ -376,9 +376,9 @@ In this section, we will launch brute force attacks in Kali Linux to generate te
        - Source Port: 0 &nbsp; &nbsp; <i> The source port used for the attack </i>
    - Therefore we are able to successfully detect the brute force attack through searching on Splunk for the respective logs
    - To enhance our detection capabilites, we can create dashboards and alerts on Splunk.
-   
+</br></br>
 ### Login Activity and Threat Monitoring Dashboard in Splunk
-The Login Activity and Threat Monitoring Dashboard which I created in Splunk is designed to provide insights into both successful and failed login attempts, helping detect potential security threats. It includes a column chart for Failed Logins and another for Successful Logins, as well as a pie chart that shows the ratio of Successful vs. Failed Logins. Additionally, the dashboard features a table listing the Top 10 Source IPs for Failed Logins, allowing for easy identification of suspicious activity.</br></br>
+The Login Activity and Threat Monitoring Dashboard which I created in Splunk is designed to provide insights into both successful and failed login attempts, helping detect potential security threats. It includes a time chart for Failed Logins and another for Successful Logins, as well as a pie chart that shows the ratio of Successful vs. Failed Logins. Additionally, the dashboard features a table listing the Top 10 Source IPs for Failed Logins, allowing for easy identification of suspicious activity.</br></br>
 
 By correlating the time of failed logins with successful logins, the dashboard enables the detection of login patterns that may suggest security concerns, such as brute-force attacks or compromised accounts. For example, if a user successfully logs in after several failed attempts, it may indicate an attacker trying various credentials. This correlation allows for proactive investigation and response to potential unauthorized access or account breaches.</br></br>
 ![image](https://github.com/user-attachments/assets/46f5c330-0710-4627-9e5c-d889b3745ca0)</br>
@@ -433,8 +433,6 @@ REF 37 - Login Activity and Threat Monitoring Dahsboard
 
       
   
-
-
 
 ## Conclusion: 
 This project provided valuable hands-on experience in building and managing a security lab within AWS, simulating real-world attack scenarios, and gaining deep insights into network and domain security. By integrating tools like Splunk, Kali Linux, and Atomic Red Team, the project not only deepened understanding of Active Directory but also significantly enhanced the ability to detect and respond to modern cyber threats. The ability to monitor and analyze security events within a simulated attack environment has reinforced key skills in security operations, threat detection, and incident response, which will be crucial for securing networks and systems in real-world scenarios.
