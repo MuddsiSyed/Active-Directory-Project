@@ -407,7 +407,7 @@ REF 37 - Login Activity and Threat Monitoring Dahsboard
    </br></br>       
    - <b>Successful VS Failed Logins:</b>
    ![image](https://github.com/user-attachments/assets/76da4aee-e6f1-40c3-8fe8-377864b0d6d6)</br>
-   REF 40 - This visualization provides a quick, high-level overview of the proportion of failed versus successful login attempts over a specific time period, typically the past 24 hours.</br>
+   REF 40 - This visualization provides a quick, high-level overview of the proportion of failed versus successful login attempts over a specific time period - the past 24 hours.</br>
     <b> Key Points to Consider: </b></br>
       - <b> Purpose: </b>The pie chart helps easily compare the relative number of successful logins against failed logins in a given time frame. This is crucial for identifying whether login attempts are mostly legitimate or if there’s a significant amount of failed logins that might indicate a security issue.
       - <b> Segments: </b></br>
@@ -415,8 +415,20 @@ REF 37 - Login Activity and Threat Monitoring Dahsboard
             The other segment will represent the successful login attempts.</br>
       - <b> Data Source: </b>The data is pulled from both successful and failed login events. It gives an overall picture of login health — if the failed logins take up a significant portion of the chart, this can be an immediate indicator that something needs investigation (e.g., brute force attacks, invalid credentials, or misconfigured systems).
       - <b> Use Case: </b></br>
-            Proactive Security Monitoring: If the pie chart shows a disproportionate amount of failed logins (for example, 70% failed vs 30% successful), this could trigger an immediate investigation into potential attacks, misconfigurations, or suspicious activities.</br>
-            Comparing Trends: Over time, the chart can show trends in the balance between successful and failed logins, highlighting shifts in login behavior that require attention.</br>
+            <b>Proactive Security Monitoring:</b> If the pie chart shows a disproportionate amount of failed logins (for example, 70% failed vs 30% successful), this could trigger an immediate investigation into potential attacks, misconfigurations, or suspicious activities.</br>
+            <b>Comparing Trends:</b> Over time, the chart can show trends in the balance between successful and failed logins, highlighting shifts in login behavior that require attention.</br>
+
+
+   - <b> Top 10 Source IPs for Failed Logins:</b>
+   ![image](https://github.com/user-attachments/assets/d7d4334c-99a2-40f1-977c-9a1bacede5cf)</br>
+   Ref 41 - Top 10 Source Ips for Failed Logins from the past 24 hours to realtime</br>
+   <b> Key Points to Consider: </b></br>
+      - <b> Purpose: </b>This visualization is designed to identify and track the IP addresses that have made the most failed login attempts within a specified time frame. Monitoring this information helps in identifying potential security threats, such as brute-force attacks or unauthorized access attempts, which could compromise your system.
+      - <b> Use Case: </b></br>
+           <b>Detect Suspicious Activity:</b> If an IP address is repeatedly attempting to log in and failing, it may indicate an attacker trying to guess passwords (brute-force attack).</br>
+           <b>Track Malicious Sources:</b> Multiple failed login attempts from the same or similar IP addresses could help pinpoint malicious actors targeting your system.</br>
+           <b>Enhance Security Monitoring:</b> By regularly reviewing the top source IPs with failed logins, you can proactively respond to security risks, block harmful IPs, or strengthen login security measures.</br>
+
       
   
 
